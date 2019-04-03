@@ -1,0 +1,3830 @@
+
+
+What will the following statement is true in context of JDBC 4?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+JDBC 4 auto loads and registers the Driver available in build path for Database access
+
+ 
+ ? 
+
+
+Driver jar is not required while working with JDBC4
+
+ 
+ ? 
+
+
+Class.forName("driver name") is still required to load and register the driver
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+       
+ 
+  
+
+
+Q2
+? ? 
+
+public class TestDemo 
+ {
+  @Ignore @Test(expected = ClassCastException.class)
+  public void testGetLastName()
+ { }
+  @Ignore @Test
+  public void getFirstName() 
+ { }
+ }
+
+ Consider the above java code snippet. How many test cases will execute?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+3
+
+ 
+ ? 
+
+
+2
+
+ 
+ ? 
+
+
+1
+
+ 
+ ? 
+
+
+0
+ 
+
+
+      
+  
+
+
+Q3
+? ? 
+
+public class TestDemo 
+ {
+ @Test                                                                                                  
+  static TestDemo td=new TestDemo();
+
+  public static void main(String args[])
+  {
+  td.displayData();
+  }
+   @Test @Ignore
+   void displayData()
+   {
+    System.out.println("hello!!!");
+   }   
+
+ }
+
+ Consider the given java code snippet & predict the output.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+no output , as @ignore is given above displayData method
+
+ 
+ ? 
+
+
+hello!!!
+
+ 
+ ? 
+
+
+compilation fails as @Test Cannot be used for a object
+
+ 
+ ? 
+
+
+runtime exception occurs
+ 
+
+
+       
+ 
+  
+
+
+Q4
+? ? 
+
+Feature: Is it Friday yet?
+   Everybody wants to know when it's Friday
+
+   Scenario: Sunday isn't Friday        
+     Given today is Sunday              
+     When I ask whether it's Friday yet 
+     Then I should be told "Nope"  
+
+ Which of the below generated step file matching with the feature mentioned above?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+@Given("^today is Sunday$")
+ public void today_is_Sunday()
+ {
+ throw new PendingException();
+ }
+
+ @When("^I ask whether it's Friday yet$")
+ public void i_ask_whether_is_s_Friday_yet()
+ {
+ throw new PendingException();
+ }
+
+ @Then("^I should be told \"([^\"]*)\"$")
+ public void i_should_be_told(String arg1)
+ {
+ throw new PendingException();
+ }
+  
+
+ 
+ ? 
+
+
+@Given("^today is Sunday$")
+ public void today_is_Sunday()
+ {
+ throw new PendingException();
+ }
+
+ @Then("^I should be told \"([^\"]*)\"$")
+ public void i_should_be_told(String arg1)
+ {
+ throw new PendingException();
+ }
+  
+
+ 
+ ? 
+
+
+@Given("^today is Sunday$")
+ public void today_is_Sunday()
+ {
+ throw new PendingException();
+ }
+
+ @When("^I ask whether it's Friday yet$")
+ public void i_ask_whether_is_s_Friday_yet()
+ {
+ throw new PendingException();
+ }
+  
+
+ 
+ ? 
+
+
+@When("^I ask whether it's Friday yet$")
+ public void i_ask_whether_is_s_Friday_yet()
+ {
+ throw new PendingException();
+ }
+
+ @Then("^I should be told \"([^\"]*)\"$")
+ public void i_should_be_told(String arg1)
+ {
+ throw new PendingException();
+ }
+  
+ 
+
+
+      
+  
+
+
+Q5
+? ? 
+
+Which of the following Selenium IDE script is correct for below given flow?
+
+ 1. Open  'opencartdemo' application
+ 2. verify title
+ 3. Verify if search text box present on page
+ 4. Enter text in search text box "Mobile"
+ 5. click on search button
+ 6. Verify the text" Search - mobile"  is displaying on web page
+ 7. Close the application
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+1. geturl https://demo.opencart.com/
+2. assertTitle Your Store
+3. verifyElementPresent name=search
+4. type name=search Mobile
+5. clickAndWait id=serbutton
+6. verifyText id=text1 Search - mobile 
+7. Close 
+
+
+
+ 
+ ? 
+
+
+1. open https://demo.opencart.com/
+2. assertTitle Your Store
+3. verifyElementPresent name=search
+4. type name=search Mobile
+5. clickAndWait id=serbutton
+6. verifyText id=text1 Search - mobile 
+7. Exit 
+
+
+
+ 
+ ? 
+
+
+1. open https://demo.opencart.com/
+2. assertTitle Your Store
+3. verifyElementPresent name=search
+4. type name=search Mobile
+5. clickAndWait id=serbutton
+6. verifyText id=text1 Search - mobile 
+7. Quit 
+
+
+
+ 
+ ? 
+
+
+1. open https://demo.opencart.com/
+2. assertTitle Your Store
+3. verifyElementPresent name=search
+4. type name=search Mobile
+5. clickAndWait id=serbutton
+6. verifyText id=text1 Search - mobile 
+7. Close 
+
+
+ 
+
+
+      
+  
+
+
+Q6
+? ? 
+
+When, Then, And, Given keywords can be replaced by which keyword?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+--
+
+ 
+ ? 
+
+
+*
+
+ 
+ ? 
+
+
+#
+
+ 
+ ? 
+
+
+&
+ 
+
+
+      
+  
+
+
+Q7
+? ? 
+
+Scenario outline is:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+used to replace different keyword
+
+ 
+ ? 
+
+
+basically replaces variable/keywords with the value from the table. 
+Each row in the table is considered to be a scenario.
+
+ 
+ ? 
+
+
+used to add negative type comments. 
+
+ 
+ ? 
+
+
+used to add conditions to your steps.
+ 
+
+
+      
+  
+
+
+Q8
+? ? 
+
+Which of the following features are NOT supported by Selenium IDE ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Test in multiple browsers
+
+ 
+ ? 
+
+
+Test against Firefox only
+
+ 
+ ? 
+
+
+Export recorded tests to scripts
+
+ 
+ ? 
+
+
+Record and Play
+ 
+
+
+      
+  
+
+
+Q9
+? ? 
+
+Which of the following Selenium Web Driver code is correct for "Reset Button" on 
+ application web page?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+driver.findElement(By.name("btnReset")).sendKeys("You pressed Ok Button");
+
+ 
+ ? 
+
+
+driver.findElement(By.name("btnReset")).click();
+
+ 
+ ? 
+
+
+driver.findElement(By.name("btnReset")).submit();
+
+ 
+ ? 
+
+
+driver.findElement(By.name("btnReset")).reset();
+ 
+
+
+      
+  
+
+
+Q10
+? ? 
+
+Consider the following HTML code :
+
+ <html>
+             <head>
+                          <title>Select Dropdown</title>
+              </head>
+ <body>
+              <div class="bn-default">
+                       <p>Please Enter any value: </p>
+                       <input name="textbox" class="txtbox-default" type="text"></input>
+                       <input name="textbox" class="txtbox-default" type="text"></input>
+                       <input type="radio" name="radio" value="option1" checked> 
+             </div>
+ </body>
+ </html>
+
+ Which of the following is the best xpath to find second textbox ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Xpath = //div[@class='bn-default']/input[2]
+
+ 
+ ? 
+
+
+Xpath = //div[@class='bn-default']/input[1]
+
+ 
+ ? 
+
+
+Xpath = //div[@class='bn-default']/input
+
+ 
+ ? 
+
+
+Xpath = //*[@name='textbox'][@class='txtbox-default']
+ 
+
+
+      
+  
+
+
+Q11
+? ? 
+
+Regarding the BDD which of the below statement is correct?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Test written are more complicated
+
+ 
+ ? 
+
+
+Test are written in plain descritive english
+
+ 
+ ? 
+
+
+BDD is same as TDD
+
+ 
+ ? 
+
+
+None of these
+ 
+
+
+      
+  
+
+
+Q12
+? ? 
+
+Cucumber Hooks allows us to better manage the code workflow and helps us to reduce 
+ the code redundancy.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+TRUE
+
+ 
+ ? 
+
+
+FALSE
+ 
+
+
+      
+  
+
+
+Q13
+? ? 
+
+Consider the below scenario:
+
+ David has to select selenium flavor suitable for  below requirement:
+
+ "The application needs to be tested across different browsers"
+
+ Which flavor would you suggest to David?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Selenium IDE
+
+ 
+ ? 
+
+
+Selenium WebDriver
+
+ 
+ ? 
+
+
+Selenium Grid
+
+ 
+ ? 
+
+
+Selenium Web
+ 
+
+
+      
+  
+
+
+Q14
+? ? 
+
+Consider the following scenario:
+
+  Test Engg. wants to automate below scenario using Selenium IDE:
+ Open URL: http://www.google.com/ and search for "Sachin Tendulkar" 
+ After that he/she needs to ensure link "Sachin Tendulkar - Wikipedia, the free encyclopedia" 
+ is present on the results page
+
+ Which Selenium IDE commands would you suggest to Test Engg.?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Test Engg. has to use Open,Sendkeys,waitForElementPresent,assertTextPresent commands 
+to automate this given scenario
+
+ 
+ ? 
+
+
+Test Engg. has to use get,type,VerifyText commands to automate this given scenario
+
+ 
+ ? 
+
+
+Test Engg. has to use Open,type,waitForTextPresent,VerifyLink commands to automate 
+this given scenario
+
+ 
+ ? 
+
+
+Test Engg. has to use Open,type,waitForElementPresent,assertText commands to automate 
+this given scenario
+ 
+
+
+      
+  
+
+
+Q15
+? ? 
+
+BDD helps to focus on the user's needs and the system's expected behavior rather than 
+ focusing too much on testing the implementation.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+TRUE
+
+ 
+ ? 
+
+
+FALSE
+ 
+
+
+      
+  
+
+
+Q16
+? ? 
+
+Which commands would you use to automate the following test scenario using Selenium IDE?
+ Open URL: http://www.google.com/ and search for "Page Object Model".
+ The search textbox id is "lbsearch"
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+1.open https://www.google.co.in 
+2.type id=lbsearch Page Object Model
+
+
+
+ 
+ ? 
+
+
+1.get https://www.google.co.in 
+2.type id=lbsearch Page Object Model
+
+
+
+ 
+ ? 
+
+
+1.geturl https://www.google.co.in 
+2.sendKeys id=lbsearch Page Object Model
+
+
+
+ 
+ ? 
+
+
+1.open https://www.google.co.in 
+2.insert id=lbsearch Page Object Model
+
+
+ 
+
+
+      
+  
+
+
+Q17
+? ? 
+
+Cucumber doen not support which of the below software platform?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Ruby on rails
+
+ 
+ ? 
+
+
+Selenium
+
+ 
+ ? 
+
+
+Spring framework
+
+ 
+ ? 
+
+
+Android
+ 
+
+
+      
+  
+
+
+Q18
+? ? 
+
+Which of the below is not a Cucumber keyword?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Feature
+
+ 
+ ? 
+
+
+Scenario
+
+ 
+ ? 
+
+
+Then
+
+ 
+ ? 
+
+
+keys
+ 
+
+
+      
+  
+
+
+Q19
+? ? 
+
+Find the below given code snippet to select the value in City dropdown.
+
+ WebElement cityvar = Driver.findElement(By.name("dropcity")
+ Select sel = new Select(cityvar);
+ sel.selectByText("Bangalore");
+
+ State whether the above code will get execute.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Yes, the code will execute 
+
+ 
+ ? 
+
+
+No, the code will not execute
+
+ 
+ ? 
+
+
+Code will give compilation error
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q20
+? ? 
+
+Background in Cucumber is:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+used to define a condition in the feature file. 
+
+ 
+ ? 
+
+
+used to define a step or series of steps which are common to all the tests in the feature file. 
+
+ 
+ ? 
+
+
+used to define a action in the feature file. 
+
+ 
+ ? 
+
+
+used to define a test.
+ 
+
+
+      
+  
+
+
+Q21
+? ? 
+
+In traditional automation more knowledge is required for designing as compared to BDD.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+This statement is correct
+
+ 
+ ? 
+
+
+This statement is wrong
+
+ 
+ ? 
+
+
+This statement is irrelavant to both approach.
+
+ 
+ ? 
+
+
+None of these
+ 
+
+
+      
+  
+
+
+Q22
+? ? 
+
+In WebDriver code what is the purpose of implicit wait?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+There is no feature for wait.
+
+ 
+ ? 
+
+
+The implicit wait will tell to the web driver to wait for certain amount of time before it throws 
+a No Such Element Exception
+
+ 
+ ? 
+
+
+The implicit wait is used to tell the Web Driver to wait for till the page gets loaded before 
+throwing an ElementNotVisibleExceptio. 
+
+ 
+ ? 
+
+
+The implicit wait is used to tell the Web Driver to wait for expected condition or the maximum 
+time exceeded before throwing an ElementNotVisibleException
+ 
+
+
+      
+  
+
+
+Q23
+? ? 
+
+Which of the below is the example of a scenario?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Then some testable outcome is achieved
+And something else we can check happens too
+
+
+
+ 
+ ? 
+
+
+When some action by the actor
+Then some testable outcome is achieved
+And something else we can check happens too
+
+
+
+ 
+ ? 
+
+
+Scenario: Some determinable business situation
+Given some precondition
+And some other precondition
+When some action by the actor
+Then some testable outcome is achieved
+And something else we can check happens too
+
+
+
+ 
+ ? 
+
+
+Scenario: Some determinable business situation
+Then some testable outcome is achieved
+And something else we can check happens too
+
+
+ 
+
+
+       
+ 
+  
+
+
+Q24
+? ? 
+
+Consider the below SomeServlet Code:
+
+ out.println("Output: " + request.getRequestURI());
+
+ If below is the URL used to invoke MyServlet,
+
+ http://localhost:8080/SomeApp/SomeServlet?txtName=bob&txtAmount=1000&btnSubmit=SUBMIT
+
+ then, What will be the output?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Output: txtName=bob&txtAmount=1000&btnSubmit=SUBMIT
+
+ 
+ ? 
+
+
+Output : http://localhost:8080/SomeApp/SomeServlet?txtName=bob&txtAmount=1000&btnSubmit=SUBMIT
+
+ 
+ ? 
+
+
+Output: null
+
+ 
+ ? 
+
+
+Output: /SomeApp/SomeServlet
+ 
+
+
+      
+  
+
+
+Q25
+? ? 
+
+Which of the following is correct to implement interservlet communication?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+RequestDispatcher rd = RequestDispatcher.getRequestDispatcher("path"); rd.include(request, response);
+
+ 
+ ? 
+
+
+RequestDispatcher rd = getServletContext().getRequestDispatcher("path"); rd.include(request, response);
+
+ 
+ ? 
+
+
+RequestDispatcher rd = RequestDispatcher.getRequestDispatcher(path);
+
+ 
+ ? 
+
+
+RequestDispatcher rd = getServletContext().getRequestDispatcher("path"); rd.dispatch(request,response);
+ 
+
+
+      
+  
+
+
+Q26
+? ? 
+
+Which method of HttpSession object is used to find out at what time session was created?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+public long getCreationTime()
+
+ 
+ ? 
+
+
+public long getLastAccessedTime()
+
+ 
+ ? 
+
+
+public long getLastCreationTime()
+
+ 
+ ? 
+
+
+public long getFirstAccessedTime()
+ 
+
+
+       
+ 
+  
+
+
+Q27
+? ? 
+
+Ganesh wants to include a file at the JSP page after page translation.
+ Which JSP directive has to be used by him?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+taglib directive
+
+ 
+ ? 
+
+
+page directive
+
+ 
+ ? 
+
+
+jsp action include
+
+ 
+ ? 
+
+
+include directive
+ 
+
+
+      
+  
+
+
+Q28
+? ? 
+
+In JSP Action tags, which tag is used to add an object to session?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+<jsp:include>
+
+ 
+ ? 
+
+
+<jsp:useBean>
+
+ 
+ ? 
+
+
+<jsp:plugin>
+
+ 
+ ? 
+
+
+<jsp:param>
+ 
+
+
+      
+  
+
+
+Q29
+? ? 
+
+<c:forEach var="item" items="one, two, three, four" >
+ //LINE 1
+  </c:forEach>
+
+ Select the correct option which will display all the value of items:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+<%=#{item} %>
+
+ 
+ ? 
+
+
+<% ${item} %>
+
+ 
+ ? 
+
+
+${item}
+
+ 
+ ? 
+
+
+${item[i] }
+ 
+
+
+      
+  
+
+
+Q30
+? ? 
+
+Consider following JSP code snippet. What would it result in? 
+
+ <%! public String sample()
+ { 
+    return "Testing method sample()"; 
+ } 
+    %> <%=sample()%>
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Prints "Testing method sample()"
+
+ 
+ ? 
+
+
+Will result in Blank page, however no error displayed on the page
+
+ 
+ ? 
+
+
+Compilation error as the function cannot be called inside the expression tag
+
+ 
+ ? 
+
+
+Runtime Exception as the function cannot be called inside the expression tag
+ 
+
+
+       
+ 
+  
+
+
+Q31
+? ? 
+
+Select the correct way of specifying Single Table per Class hierarchy entity mapping strategy:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+InheritanceType.JOINED
+
+ 
+ ? 
+
+
+InheritanceType.SINGLE_TABLE
+
+ 
+ ? 
+
+
+InheritanceType.TABLE_PER_CLASS
+
+ 
+ ? 
+
+
+None of these
+ 
+
+
+      
+  
+
+
+Q32
+? ? 
+
+Which annotation is representing Entity class?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+@Entity
+
+ 
+ ? 
+
+
+@EntityClass
+
+ 
+ ? 
+
+
+@EntityName
+
+ 
+ ? 
+
+
+@Entities
+ 
+
+
+       
+ 
+  
+
+
+Q33
+? ? 
+
+Select the correct statements about spring annotations?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+@Param annotation is class level annotation used to map requested URL
+
+ 
+ ? 
+
+
+@ModelAttribute annotation binds a method parameter to a named attribute, exposed to web view
+
+ 
+ ? 
+
+
+@RequestMapping can only be applied to methods of repository class
+
+ 
+ ? 
+
+
+Usage of @Controller annotation at class level represents that class is used for Database connection
+ 
+
+
+      
+  
+
+
+Q34
+? ? 
+
+Choose the correct statement about the given Spring code:
+
+ @Component
+ public class Order {
+ @Autowired
+ private Product product;
+ private Customer customer;
+ @Autowired
+ public Order(Customer customer)
+ {
+ this.customer = customer;
+ }
+
+ // . . .
+ }
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+We can do @AutoWired by constructor, but not by name
+
+ 
+ ? 
+
+
+We can do @AutoWired by constructor & by name
+
+ 
+ ? 
+
+
+We can do @AutoWired by name & but not by constructor
+
+ 
+ ? 
+
+
+We can do @AutoWired not by name & by constructor
+ 
+
+
+      
+  
+
+
+Q35
+? ? 
+
+Consider the given class:
+
+ //Line 1......
+ public class PaymentRepositoryImpl {
+     //Line 2.........
+    private EntityManager entityManager;
+   //rest code 
+ }
+
+ If there is a requirement to configure above class using annotations, then which of the following 
+ annotations are valid to define Spring repository bean and inject EntityManager instance respectively?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+1.@Repository
+ 2.@PersistenceContext
+  
+
+ 
+ ? 
+
+
+1.@Service
+ 2.@PersistenceUnit
+  
+
+ 
+ ? 
+
+
+1.@Repository
+ 2.@EntityManager
+  
+
+ 
+ ? 
+
+
+1.@Controller
+ 2.@PersistenceContext
+  
+ 
+
+
+      
+  
+
+
+Q36
+? ? 
+
+Pick up the valid option  for the scope attribute in Spring 3.0:
+
+ <bean id="app " class="com.cg.payment.dto "  scope=" "/>
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+context
+
+ 
+ ? 
+
+
+prototype
+
+ 
+ ? 
+
+
+httpSession
+
+ 
+ ? 
+
+
+page
+ 
+
+
+      
+  
+
+
+Q37
+? ? 
+
+Select the correct choice based on given statements: 
+
+1. DataSource in Spring can be acquired using either DriverManagerDataSource or by using JNDI lookup. 
+2. Entity manager could be either application managed or container managed.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Statement 1 is true where as 2 is false
+
+ 
+ ? 
+
+
+Statement 1 is false where as 2 is true
+
+ 
+ ? 
+
+
+Both statements are true
+
+ 
+ ? 
+
+
+Both statements are false
+ 
+
+
+      
+  
+
+
+Q38
+? ? 
+
+In a Spring applicaton, Consider InternalResourceViewResolver is used and handleRequest method returns ModelAndView
+ ("home","msg",message) then which JSP will be invoked?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+home.jsp
+
+ 
+ ? 
+
+
+msg.jsp
+
+ 
+ ? 
+
+
+message.jsp
+
+ 
+ ? 
+
+
+model.jsp
+ 
+
+
+      
+  
+
+
+Q39
+? ? 
+
+Which Spring modules usage will be more suitable for designing spring application in the below given scenarios? 
+
+Scenario 1: Developer wants to use new data access technologies, such as non-relational databases in his application. 
+Scenario 2: Developer wants to use an embedded server in a development environment.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Scenario 1. Spring Data 
+Scenario 2. Spring Boot
+
+ 
+ ? 
+
+
+Scenario 1. Spring Data 
+Scenario 2. Spring Cloud
+
+ 
+ ? 
+
+
+Scenario 1. Spring XD 
+Scenario 2. Spring Framework
+
+ 
+ ? 
+
+
+Scenario 1. Spring XD 
+Scenario 2. Spring Web
+ 
+
+
+      
+  
+
+
+Q40
+? ? 
+
+Select the correct statement about spring annotations?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+@Repository: This annotation marks classes that implement a part of the database access logic of an application
+
+ 
+ ? 
+
+
+@ComponentScan : An equivalent for Spring XML's <context:component-scan/> is provided with the @ComponentScan annotation
+
+ 
+ ? 
+
+
+@EnableAutoConfiguration annotation will trigger automatic loading of all the beans the application requires
+
+ 
+ ? 
+
+
+All of the above
+ 
+
+
+       
+ 
+  
+
+
+Q41
+? ? 
+
+Given:
+
+ 1. interface Horse { public void nicker(); }
+
+ Which will give compilation error?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+public class Eyra implements Horse 
+ { public void nicker() 
+ { } }
+  
+
+ 
+ ? 
+
+
+public class Eyra implements Horse 
+ { public void nicker(int x) 
+ { } }
+  
+
+ 
+ ? 
+
+
+public class Eyra implements Horse 
+ {
+ public void nicker() 
+ { System.out.println("huhuhuhuh..."); }
+ }
+  
+
+ 
+ ? 
+
+
+public abstract class Eyra implements Horse 
+ {
+ public void nicker(int loud) 
+ { }
+ }
+  
+ 
+
+
+      
+  
+
+
+Q42
+? ? 
+
+List<String> list = new ArrayList<>();  //Line 1
+ list.add("Hello");
+ list.add("World");
+ Consumer<List<String>> consumer = Collections ::reverse; //Line 2
+ consumer.accept(list);    
+ System.out.println(list);
+
+ Refer to the above code snippet; what will be the output in console?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Display [World, Hello] in console
+
+ 
+ ? 
+
+
+Display [Hello, World] in console
+
+ 
+ ? 
+
+
+Compilation error at Line number 1, as generics not specified
+
+ 
+ ? 
+
+
+Compilation error at Line number 2, as reverse method returns does not return void
+ 
+
+
+      
+  
+
+
+Q43
+? ? 
+
+Which of the following is an checked Exception in JAVA?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+ClassCastException
+
+ 
+ ? 
+
+
+SQLException
+
+ 
+ ? 
+
+
+NullPointerException
+
+ 
+ ? 
+
+
+ArrayIndexOutOfBoundsException
+ 
+
+
+      
+  
+
+
+Q44
+? ? 
+
+Refer to the below code.
+
+ import java.util.Arrays;
+ import java.util.List;
+ import java.util.TreeSet;
+  
+ public class MyArray{
+  
+     public static void main(String a[])
+ {
+         String[] strArr = {"one","two","three","four","four","five"};
+         //convert string array to list
+         List<String> tmpList = Arrays.asList(strArr);
+         //create a treeset with the list, which eliminates duplicates
+         TreeSet<String> unique = new TreeSet<String>(tmpList);
+         System.out.println(unique);
+     }
+ }
+
+ What will be the output?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+[five, four, one, three, two]
+
+ 
+ ? 
+
+
+[five,four, four, one, three, two]
+
+ 
+ ? 
+
+
+compilation fails as list object cannot be passed to constructor of Treeset
+
+ 
+ ? 
+
+
+[one,two,three,four,five]
+ 
+
+
+      
+  
+
+
+Q45
+? ? 
+
+What will be the output of the program? 
+
+import java.util.*; 
+class Test 
+{ 
+ public static void main (String[] args) 
+ { 
+ Set hashSet = new HashSet(); 
+ hashSet.add(1); 
+ hashSet.add(null); 
+ hashSet.add(null); 
+ hashSet.add("1"); 
+ System.out.println(hashSet); 
+ } 
+}
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+[null,1,1]
+
+ 
+ ? 
+
+
+[1,1]
+
+ 
+ ? 
+
+
+[1]
+
+ 
+ ? 
+
+
+[1,null,null]
+ 
+
+
+      
+  
+
+
+Q46
+? ? 
+
+class Alpha { 
+ public static void main(String[] args)
+ { 
+ try { 
+ int x = args[0]/args[1];
+ } catch (NullPointerException nullEx)
+ {
+ System.out.print("x"); 
+ } catch (Exception ex)
+ { System.out.print("y"); 
+ } finally { 
+ System.out.print("z"); 
+ } } } 
+
+ What would be the output of above code fragment if the program executed on command line 
+ as "java Alpha ten 0"?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+x z
+
+ 
+ ? 
+
+
+Compilation error due to incompitable types used for calculation
+
+ 
+ ? 
+
+
+An exception is thrown at runtime
+
+ 
+ ? 
+
+
+yz
+ 
+
+
+      
+  
+
+
+Q47
+? ? 
+
+public class StreamDemo {
+
+  public static void main(String[] args) 
+ {
+ public static void main(String[] args) 
+ {
+    Stream<String>str = Stream.of("Hollow","wow","Welcome","wow","world");
+     str.filter((ref)->ref.contains("w")).distinct().forEach((strr)->System.out.println(strr));
+    
+ }
+ }
+ What is the output of above code?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Hollow
+ wow
+ wow
+ Welcome
+ world
+  
+
+ 
+ ? 
+
+
+Hollow
+ wow
+ Welcome
+ world
+  
+
+ 
+ ? 
+
+
+Hollow
+ wow
+ world
+  
+
+ 
+ ? 
+
+
+Hollow
+ wow
+ wow
+ world
+  
+ 
+
+
+      
+  
+
+
+Q48
+? ? 
+
+What will be written to the standard output when the following program is run?
+
+ public class Test {
+ public static void main(String[] args) 
+ {
+ String word = "restructure";
+ System.out.println(word.substring(2, 3));
+ }
+ }
+
+ Select the one correct answer.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+est
+
+ 
+ ? 
+
+
+s
+
+ 
+ ? 
+
+
+es
+
+ 
+ ? 
+
+
+str
+ 
+
+
+      
+  
+
+
+Q49
+? ? 
+
+Which method is used to get current thread name?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Thread.currentThread().getName();
+
+ 
+ ? 
+
+
+getThread().getName();
+
+ 
+ ? 
+
+
+Thread.getName()
+
+ 
+ ? 
+
+
+none of the above
+ 
+
+
+      
+  
+
+
+Q50
+? ? 
+
+class Demo2
+ {
+  public static void main(String ar[])
+ {
+   int a=Integer.parseInt(ar[0]);
+   int b=Integer.parseInt(ar[1]);  
+   System.out.println(a+b);
+   
+  }
+ }
+
+ Run application using 
+
+ java  Demo2  10 hello
+
+ Identify possible exception to be handled in the program:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+ArrayIndexOutOfBoundsException
+
+ 
+ ? 
+
+
+NumberFormatException
+
+ 
+ ? 
+
+
+IllegalArgumentException
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q51
+? ? 
+
+Which of the following Java interfaces can be used by Collections.sort() method to sort user defined 
+ objects stored in a list?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+SortedSet
+
+ 
+ ? 
+
+
+Comparator
+
+ 
+ ? 
+
+
+Comparable
+
+ 
+ ? 
+
+
+None
+ 
+
+
+      
+  
+
+
+Q52
+? ? 
+
+Which of the following is true regarding Class Loader?
+
+ a. check Java programs have been compiled correctly
+ b. prevents a class that is loaded off the network from pretending to be one of the standard 
+     built-in classes or from servers
+ c.the byte code will not access private data when they should not
+ d. implements security for the VM
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+option a
+
+ 
+ ? 
+
+
+option a & b
+
+ 
+ ? 
+
+
+option b
+
+ 
+ ? 
+
+
+option c & d
+ 
+
+
+      
+  
+
+
+Q53
+? ? 
+
+Given the following class, which statements can be inserted at line (1) will cause 
+ the compilation error?
+
+ public class Test {
+ int a;
+ int b = 0;
+ static int c;
+ public void m() 
+ {
+ int d;
+ int e = 0;
+ // (1) INSERT CODE HERE.
+ }
+ }
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+a++
+
+ 
+ ? 
+
+
+b++
+
+ 
+ ? 
+
+
+c++
+
+ 
+ ? 
+
+
+d++
+ 
+
+
+      
+  
+
+
+Q54
+? ? 
+
+public class LambdaDemo {
+
+ public static void main(String[] args) 
+ {
+   Supplier<String>supplier = ()->"Welcome to Java World";
+   Predicate<String>pred = (str1)->str1.length()>10;
+ System.out.println(pred.test(supplier.get()));}}
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+True
+
+ 
+ ? 
+
+
+False
+
+ 
+ ? 
+
+
+Compilation error
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q55
+? ? 
+
+Select the true statements about serialization.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Serialization is a mechanism of saving the state of an object into a file
+
+ 
+ ? 
+
+
+To persist an object to a file, the object Class properties needs an transient keyword
+
+ 
+ ? 
+
+
+Serialization is the process of reconstructing the object from the deserialized state
+
+ 
+ ? 
+
+
+All of the Above
+ 
+
+
+      
+  
+
+
+Q56
+? ? 
+
+Consider the given code: 
+
+List<Integer> listInt = Arrays.asList(10,20,30,40,50,60); 
+System.out.println(listInt.stream().reduce((prev,current)->prev + current)); 
+
+Select the correct output ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Optional[210]
+
+ 
+ ? 
+
+
+Optional[30]
+
+ 
+ ? 
+
+
+Optional[110]
+
+ 
+ ? 
+
+
+210
+ 
+
+
+      
+  
+
+
+Q57
+? ? 
+
+class AllGoesWrong {
+ public static void main(String[] args) 
+ {
+ AllGoesWrong a = new AllGoesWrong();
+ try {
+ a.blowUp();
+ System.out.println("a");
+ } catch (IOException e | SQLException e) 
+ {
+ System.out.println("c");
+ } finally {
+ System.out.println("d");
+ }
+ }
+ void blowUp() throws IOException, SQLException {
+ throw new SQLException();
+ }
+ }
+
+ What is the result?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+ad
+
+ 
+ ? 
+
+
+acd
+
+ 
+ ? 
+
+
+cd
+
+ 
+ ? 
+
+
+compilation error in catch block
+ 
+
+
+      
+  
+
+
+Q58
+? ? 
+
+public static void main(String[] args) 
+ {
+ 5. try {
+ 6. if(args.length == 0) throw new Exception();
+ 7. }
+ 8. catch (Exception e) 
+ {
+ 9. System.out.print("done ");
+ 10. doStuff(); // assume this method compiles
+ 11. }
+ 12. finally {
+ 13. System.out.println("finally ");
+ 14. }
+ 15. }
+
+ Which is the output of this code?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+done
+
+ 
+ ? 
+
+
+finally
+
+ 
+ ? 
+
+
+done finally
+
+ 
+ ? 
+
+
+compilation error
+
+ 
+ ? 
+
+
+no output
+ 
+
+
+      
+  
+
+
+Q59
+? ? 
+
+Which of the below statements are correct?
+
+ 1. Static variable live basically as long as their class lives.
+ 2. Instance Variables live as long as their object lives 
+ 3. Local variables live as long as their method is on stack ,however ,if their method invokes 
+ another method, ,they are temporarily unavailable.
+ 4. Block variables (in a for loop or if stmt ) live until the block completes.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+only 1 
+
+ 
+ ? 
+
+
+only 1 and 2
+
+ 
+ ? 
+
+
+All are correct
+
+ 
+ ? 
+
+
+1,2,3
+ 
+
+
+      
+  
+
+
+Q60
+? ? 
+
+Which of the following is not a Functional Interface in java 8?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Supplier
+
+ 
+ ? 
+
+
+Consumer
+
+ 
+ ? 
+
+
+Serializable
+
+ 
+ ? 
+
+
+Predicate
+ 
+
+
+      
+  
+
+
+Q61
+? ? 
+
+Which of the following statement is incorrect about anonymous inner class?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Anonymous inner classes have no name, and their type must be either a
+subclass of the named type or an implementer of the named interface.
+
+
+
+ 
+ ? 
+
+
+Because of polymorphism, the only methods you can call on an anonymous inner class 
+reference are those defined in the reference variable class (or interface), even though 
+the anonymous class is really a subclass or implementer of the reference variable type
+
+
+
+ 
+ ? 
+
+
+An anonymous inner class can extend more than one subclass or implement more than one
+interface. 
+
+
+
+ 
+ ? 
+
+
+An anonymous inner class is always created as part of a statement; don't forget to close 
+the statement after the class definition with a curly brace. This is a rare case in Java, 
+a curly brace followed by a semicolon.
+
+
+ 
+
+
+      
+  
+
+
+Q62
+? ? 
+
+import java.util.function.BiFunction;
+ public class TestQuestion {
+ public static void main(String[] args)
+ {
+ BiFunction<Integer, Integer, Boolean> isMax = (x, y) -> {
+ return (x > y ? true : false);
+ };
+ System.out.println(isMax.apply(45, 50));
+ }
+ }
+ What will be the output of above code?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+True
+
+ 
+ ? 
+
+
+False
+
+ 
+ ? 
+
+
+Compilation error as a BiFunction requires only 2 arguments
+
+ 
+ ? 
+
+
+Exception is thrown
+ 
+
+
+      
+  
+
+
+Q63
+? ? 
+
+Assuming that there are 5 rows in the ProductDetails table
+ (COLUMNS: product_id number(10), product_title varchar(30) ),
+
+ What will be the output of the following Java code?
+
+ DriverManager.registerDriver (new oracle.jdbc.driver.OracleDriver());
+      Connection conn = 
+      DriverManager.getConnection (
+      "jdbc:oracle:thin:@10.212.74.18:1521:orcl", "user", "password");
+    Statement stmt1=conn.createStatement();
+    ResultSet rs=stmt1.executeQuery("SELECT * FROM ProductDetails");
+    System.out.println(rs.getInt(1)+" "+rs.getString(2));----------Line 1
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Compilation error in the Line 1 as rs.next() is not given before this
+
+ 
+ ? 
+
+
+SQLException is raised. Because rs.next() is not given in the code
+
+ 
+ ? 
+
+
+Prints the contents of the first row from the table
+
+ 
+ ? 
+
+
+SQLException is raised. Because while loop is not given in the code
+ 
+
+
+      
+  
+
+
+Q64
+? ? 
+
+Priya is involved in the development of online shopping system. She wants to maintain product details in a cart such as product id and quantity in the form of key/value pair. She wants data in sorted manner. Which collection classes would you suggest for her to implement the functionality based on the above requirement?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+java.util.Vector
+
+ 
+ ? 
+
+
+java.util.HashMap
+
+ 
+ ? 
+
+
+java.util.TreeMap
+
+ 
+ ? 
+
+
+java.util.ArrayList
+ 
+
+
+      
+  
+
+
+Q65
+? ? 
+
+Which classes are used for Serialization process?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+ObjectInputStream & ObjectOutputStream
+
+ 
+ ? 
+
+
+ObjectIOStream & IOStream
+
+ 
+ ? 
+
+
+InputStream & OutputStream
+
+ 
+ ? 
+
+
+BufferedInputStream, FileOutputStream &  ObjectOutputStream
+ 
+
+
+      
+  
+
+
+Q66
+? ? 
+
+public class Test {
+    public static void main(String[] args)
+    {   String name=new String("aravind");
+
+   int position=name.replace('a', '*').substring(2,4).indexOf('i');
+   System.out.println(position);
+    } 
+ }//end of class
+
+ What will be the output?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+2
+
+ 
+ ? 
+
+
+4
+
+ 
+ ? 
+
+
+0
+
+ 
+ ? 
+
+
+-1
+ 
+
+
+       
+ 
+  
+
+
+Q67
+? ? 
+
+Non-fulfillment of user's expectations is called as:
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Issue
+
+ 
+ ? 
+
+
+Defect
+
+ 
+ ? 
+
+
+Product
+
+ 
+ ? 
+
+
+Risk
+ 
+
+
+      
+  
+
+
+Q68
+? ? 
+
+What is the full form of QMS?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Quality Management System
+
+ 
+ ? 
+
+
+Quality Manual System
+
+ 
+ ? 
+
+
+Quality Monitoring System
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+       
+ 
+  
+
+
+Q69
+? ? 
+
+Elicitation process is carried under which phase of SDLC model ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Feasibility
+
+ 
+ ? 
+
+
+Design
+
+ 
+ ? 
+
+
+Requirements
+
+ 
+ ? 
+
+
+Coding
+ 
+
+
+      
+  
+
+
+Q70
+? ? 
+
+When are the activities like knowledge transfer , end user training , project signoff carried out?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+After unit testing
+
+ 
+ ? 
+
+
+After acceptance testing
+
+ 
+ ? 
+
+
+After system testing
+
+ 
+ ? 
+
+
+Before system testing
+ 
+
+
+      
+  
+
+
+Q71
+? ? 
+
+Which of the given is an example of non configuration item ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Design document
+
+ 
+ ? 
+
+
+Project plan
+
+ 
+ ? 
+
+
+Weekly status Reports
+
+ 
+ ? 
+
+
+Test case
+ 
+
+
+       
+ 
+  
+
+
+Q72
+? ? 
+
+Which statement(s) is/are true about Procedures?
+
+ i. Parameter with IN mode is used to pass values to the procedure.
+ ii. Parameter with OUT mode is used to return values to the caller.
+ iii. Parameter with IN OUT mode is used to pass initial values to the procedure and return updated values to the caller.
+ iv. Formal parameter should be assigned a value, if parameter mode is IN OUT.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Statement i and ii are true
+
+ 
+ ? 
+
+
+Statement ii and iii are true
+
+ 
+ ? 
+
+
+Statement iii and iv are true
+
+ 
+ ? 
+
+
+All the statements are true
+ 
+
+
+      
+  
+
+
+Q73
+? ? 
+
+Examine the content of EMPLOYEE table:
+
+
+ Identify the query to display hiredate and number of employees joined in that date
+ in a given department number. Also order the details based on hiredate.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee GROUP BY hiredate ORDER BY 1
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee WHERE deptno=20 GROUP BY hiredate ORDER BY 1;
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee WHERE deptno=20 GROUP BY hiredate ORDER BY 0;
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee GROUP BY hiredate ORDER BY 1 WHERE deptno=20;
+ 
+
+
+      
+  
+
+
+Q74
+? ? 
+
+Examine the content of EMPLOYEE table:
+
+
+ Identify the query to display list of employee details(ename, sal and job) who are earning salary
+ higher than all the minimum salaries based on each job.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+SELECT ename,sal,job FROM employee WHERE sal>
+ (SELECT min(sal) FROM employee GROUP BY job);
+
+ 
+ ? 
+
+
+SELECT ename,sal,job FROM employee WHERE sal>ANY
+ (SELECT min(sal) FROM employee GROUP BY job);
+
+ 
+ ? 
+
+
+SELECT ename,sal,job FROM employee WHERE sal>ALL
+ (SELECT min(sal) FROM employee);
+
+ 
+ ? 
+
+
+SELECT ename,sal,job FROM employee WHERE sal>ALL
+ (SELECT min(sal) FROM employee GROUP BY job);
+ 
+
+
+      
+  
+
+
+Q75
+? ? 
+
+Examine the structure of dept table:
+
+
+ A developer had created department_master table with the similar structure of dept table using the below query:
+
+ CREATE TABLE department_master AS SELECT * FROM dept WHERE 1=2;
+
+ Identify the query to copy all records from dept table and insert the same into department_master table.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+INSERT INTO department_master SELECT * FROM dept;
+
+ 
+ ? 
+
+
+INSERT INTO department_master VALUES SELECT * FROM dept;
+
+ 
+ ? 
+
+
+INSERT INTO department_master VALUES AS SELECT * FROM dept;
+
+ 
+ ? 
+
+
+Copying of records from one table and inserting to another table is impossible.
+ 
+
+
+       
+ 
+  
+
+
+Q76
+? ? 
+
+Choose the correct style example of ID selector? 
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+p { 
+ text-align: center; 
+ color: red; 
+} 
+
+
+
+ 
+ ? 
+
+
+#para1 { 
+ text-align: center; 
+ color: red; 
+} 
+
+
+
+ 
+ ? 
+
+
+.center { 
+ text-align: center; 
+ color: red; 
+} 
+
+
+
+ 
+ ? 
+
+
+h1, h2, p { 
+ text-align: center; 
+ color: red; 
+} 
+
+
+ 
+
+
+      
+  
+
+
+Q77
+? ? 
+
+Which of the following can be used to select HTML elements based on value of their name attributes?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+getElementByName()
+
+ 
+ ? 
+
+
+getElementsByName()
+
+ 
+ ? 
+
+
+getElementById()
+
+ 
+ ? 
+
+
+getElement()
+ 
+
+
+      
+  
+
+
+Q78
+? ? 
+
+Analyze the below given HTML code and identify how many radio buttons are allowed to be selected? 
+
+<input type="radio" name="r" value="Business"/>Business 
+ <input type="radio" name="g" value="Employee - Private 
+
+Sector"/>Employee - Private Sector 
+ <input type="radio" name="b" value="Employee - Public 
+
+Sector"/>Employee - Public Sector
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+0
+
+ 
+ ? 
+
+
+1
+
+ 
+ ? 
+
+
+2
+
+ 
+ ? 
+
+
+3
+ 
+
+
+      
+  
+
+
+Q79
+? ? 
+
+Identify the properties of Document Object?
+
+ a) anchors[]
+ b) forms[]
+ c) img[]
+ d) links[]
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+a and b only
+
+ 
+ ? 
+
+
+a,b and d
+
+ 
+ ? 
+
+
+a alone
+
+ 
+ ? 
+
+
+b and d
+ 
+
+
+      
+  
+
+
+Q80
+? ? 
+
+What happens if moveTo(x,y) method is called on window object in JavaScript ? 
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Current window will be move to the coordinate specified by x and y.
+
+ 
+ ? 
+
+
+Current window will be move by x and y value.
+
+ 
+ ? 
+
+
+Moves window to a new frame.
+
+ 
+ ? 
+
+
+Window will disappear in background.
